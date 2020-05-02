@@ -1,8 +1,9 @@
 package com.example.ccalljava;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CCallJava_MainActivity extends AppCompatActivity {
 
@@ -18,5 +19,13 @@ public class CCallJava_MainActivity extends AppCompatActivity {
         CCallJavaJNI cCallJavaJNI = new CCallJavaJNI();
         cCallJavaJNI.callbackAdd();
         cCallJavaJNI.callbackGetMessage();
+
+        callbackShowToast();
+    }
+
+    public native void callbackShowToast();
+
+    public void showToast() {
+        Toast.makeText(this, "Show Toast invoke by c", Toast.LENGTH_SHORT).show();
     }
 }

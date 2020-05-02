@@ -3,6 +3,7 @@
 /* Header for class com_example_ccalljava_CCallJavaJNI */
 
 #include <jni.h>
+
 #ifndef _Included_com_example_ccalljava_CCallJavaJNI
 #define _Included_com_example_ccalljava_CCallJavaJNI
 
@@ -15,7 +16,7 @@ extern "C" {
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_example_ccalljava_CCallJavaJNI_callbackAdd
-  (JNIEnv *, jobject);
+        (JNIEnv *, jobject);
 
 /*
  * Class:     com_example_ccalljava_CCallJavaJNI
@@ -23,7 +24,10 @@ JNIEXPORT void JNICALL Java_com_example_ccalljava_CCallJavaJNI_callbackAdd
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_example_ccalljava_CCallJavaJNI_callbackGetMessage
-  (JNIEnv *, jobject);
+        (JNIEnv *, jobject);
+
+JNIEXPORT void JNICALL
+Java_com_example_ccalljava_CCallJava_MainActivity_callbackShowToast(JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }

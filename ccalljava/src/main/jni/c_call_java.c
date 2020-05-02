@@ -40,3 +40,17 @@ JNIEXPORT void JNICALL Java_com_example_ccalljava_CCallJavaJNI_callbackGetMessag
     jstring text = (*env)->NewStringUTF(env, "I am C");
     (*env)->CallVoidMethod(env, jo, jmid, text);
 };
+
+JNIEXPORT void JNICALL
+Java_com_example_ccalljava_CCallJava_1MainActivity_callbackShowToast(JNIEnv *env, jobject thiz) {
+    jclass jclazz = (*env)->FindClass(env, "com/example/ccalljava/CCallJava_MainActivity");
+    // 2.获取方法
+    // jmethodID   (*GetMethodID)(JNIEnv*, jclass, const char*, const char*);
+    jmethodID jmid = (*env)->GetMethodID(env, jclazz, "showToast", "()V");
+    // 3.对象实例化
+    // jobject     (*AllocObject)(JNIEnv*, jclass);
+    // jobject jo = (*env)->AllocObject(env, jclazz);
+    // 4.调用方法
+    // void        (*CallVoidMethod)(JNIEnv*, jobject, jmethodID, ...);
+    (*env)->CallVoidMethod(env, thiz, jmid);
+};
