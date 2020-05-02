@@ -14,6 +14,7 @@ public class JavaCallC_MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_call_c_main);
+
         JavaCallCJNI javaCallCJNI = new JavaCallCJNI();
 
         int result = javaCallCJNI.add(10, 20);
