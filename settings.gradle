@@ -1,0 +1,2 @@
+include ':app', ':javacallc', ':ccalljava'
+rootProject.name='JniDemo'
