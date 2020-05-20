@@ -1,2 +1,2 @@
-include ':app', ':javacallc', ':ccalljava', ':useso'
+include ':app', ':javacallc', ':ccalljava', ':useso', ':dynamicregjni'
 rootProject.name='JniDemo'

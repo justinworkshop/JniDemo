@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * 静态注册JNI：java调用c
+ */
 public class JavaCallC_MainActivity extends AppCompatActivity {
 
     {

@@ -5,6 +5,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * 静态注册JNI：c调用java
+ */
 public class CCallJava_MainActivity extends AppCompatActivity {
 
     {
