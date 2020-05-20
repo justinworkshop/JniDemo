@@ -8,6 +8,9 @@ package com.example.ccalljava;
  * Description: C call Java
  */
 public class CCallJavaJNI {
+    /**
+     * java调用callbackAdd, c在此方法内部反射调用java的 add方法
+     */
     public native void callbackAdd();
 
     public native void callbackGetMessage();
